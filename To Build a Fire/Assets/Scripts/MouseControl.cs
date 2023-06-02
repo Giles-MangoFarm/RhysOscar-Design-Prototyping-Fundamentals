@@ -10,8 +10,10 @@ public class MouseControl : MonoBehaviour
     public Transform playerObject; // stores the transform of the player container
     public Transform camera; // stores the transform of the camera
 
-    private Vector2 mousePos; // stores the mouse position
+    private Vector3 mousePos; // stores the mouse position
     private float xRotation = 0f; // final vertical rotation value
+    private Vector3 objectPos;
+    public GameObject campFire;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,14 @@ public class MouseControl : MonoBehaviour
         GetMousePos(); // calls a function to get the mouse position
         FixXRotation(); // clamps looking up and down
         LookAt(); // looks at the mouse position
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            mousePos = Input.mousePosition;
+            mousePos.z = 2.0f;
+            objectPos = Camera.main.ScreenToWorldPoint(mousePos);
+            Instantiate(campFire, objectPos, Quaternion.identity);
+        }
     }
 
     private void GetMousePos()
