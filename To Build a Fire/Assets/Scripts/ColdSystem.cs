@@ -26,6 +26,7 @@ public class ColdSystem : MonoBehaviour
         isCold = false;
         currentCold = 0f;
 
+        //at the start of the game, all UI is disabled
         gameOverScreen.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(false);
         coldText1.gameObject.SetActive(false);
@@ -43,7 +44,7 @@ public class ColdSystem : MonoBehaviour
             currentCold += coldRate * Time.deltaTime;
         }
 
-        //if the player's cold level reaches 25, it stops increasing and disables being cold
+        //if the player's cold level reaches 30, it stops increasing and disables being cold
         if (currentCold >= maxCold)
         {
             isCold = false;
@@ -51,14 +52,14 @@ public class ColdSystem : MonoBehaviour
 
         }
 
-        GameOver();
-        Damage();
+        GameOver(); //calls to the GameOver function
+        Damage(); //calls to the Damage function
        
     }
 
     void OnTriggerEnter(Collider col)
     {
-        //if player touches Ice Water, they become cold
+        //if player touches Ice Water, they become cold, if they stay in the Ice Water their cold gain is doubled
         if (col.gameObject.tag == "IceWater")
         {
             isCold = true;
@@ -76,9 +77,9 @@ public class ColdSystem : MonoBehaviour
             fireText.gameObject.SetActive(true);
         }
     }
-
     private void OnTriggerExit(Collider col)
     {
+        //if player exits Ice Water, their cold gain returns to the normal rate
         if (col.gameObject.tag == "IceWater")
         {
             coldRate = 1f;
@@ -87,6 +88,7 @@ public class ColdSystem : MonoBehaviour
 
     void Damage()
     {
+        //if the player's cold level reaches 5, the first warning text appears and disappears after 5 seconds
         if (currentCold >= 5f)
         {
             coldText1.gameObject.SetActive(true);
@@ -95,7 +97,7 @@ public class ColdSystem : MonoBehaviour
                 coldText1.gameObject.SetActive(false);
             }
         }
-
+        //if the player's cold level reaches 15, the first warning text appears and disappears after 5 seconds
         if (currentCold >= 15f)
         {
             coldText2.gameObject.SetActive(true);
@@ -104,7 +106,7 @@ public class ColdSystem : MonoBehaviour
                 coldText2.gameObject.SetActive(false);
             }
         }
-
+        //if the player's cold level reaches 25, the first warning text appears and disappears after 5 seconds
         if (currentCold >= 25f)
         {
             coldText3.gameObject.SetActive(true);
@@ -113,7 +115,7 @@ public class ColdSystem : MonoBehaviour
                 coldText3.gameObject.SetActive(false);
             }
         }
-
+        //if cold is set back to 0 by a campfire, any on-screen messages are disabled
         if (currentCold == 0)
         {
             coldText1.gameObject.SetActive(false);
@@ -125,7 +127,7 @@ public class ColdSystem : MonoBehaviour
     
 
     void GameOver()
-    {
+    {   //if the player reaches maximum cold level, death UI appears 
         if (currentCold == maxCold)
         {
             gameOverScreen.gameObject.SetActive(true);

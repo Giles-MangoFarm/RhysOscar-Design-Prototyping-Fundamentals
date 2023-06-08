@@ -6,6 +6,7 @@ TagManager:
   tags:
   - IceWater
   - CampFire
+  - Wood
   layers:
   - Default
   - TransparentFX
