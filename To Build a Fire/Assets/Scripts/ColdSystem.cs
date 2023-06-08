@@ -8,11 +8,16 @@ using UnityEngine.SceneManagement;
 public class ColdSystem : MonoBehaviour
 {
     public float currentCold = 0f; //the player's current cold level
-    public float maxCold = 25f; // the maximum possible cold level, reaching this means game over
+    public float maxCold = 30f; // the maximum possible cold level, reaching this means game over
     public float coldRate = 1f; // the rate at which cold increases
     public bool isCold; //whether cold is increasing or not
 
     public GameObject gameOverScreen;
+    public GameObject gameOverText;
+    public GameObject coldText1;
+    public GameObject coldText2;
+    public GameObject coldText3;
+    public GameObject fireText;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,11 @@ public class ColdSystem : MonoBehaviour
         currentCold = 0f;
 
         gameOverScreen.gameObject.SetActive(false);
+        gameOverText.gameObject.SetActive(false);
+        coldText1.gameObject.SetActive(false);
+        coldText2.gameObject.SetActive(false);
+        coldText3.gameObject.SetActive(false);
+        fireText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,7 +50,10 @@ public class ColdSystem : MonoBehaviour
             currentCold = maxCold;
 
         }
+
         GameOver();
+        Damage();
+       
     }
 
     void OnTriggerEnter(Collider col)
@@ -60,6 +73,7 @@ public class ColdSystem : MonoBehaviour
         {
             isCold = false;
             currentCold = 0f;
+            fireText.gameObject.SetActive(true);
         }
     }
 
@@ -71,11 +85,51 @@ public class ColdSystem : MonoBehaviour
         }
     }
 
+    void Damage()
+    {
+        if (currentCold >= 5f)
+        {
+            coldText1.gameObject.SetActive(true);
+            if (currentCold >= 10f)
+            {
+                coldText1.gameObject.SetActive(false);
+            }
+        }
+
+        if (currentCold >= 15f)
+        {
+            coldText2.gameObject.SetActive(true);
+            if (currentCold >= 20f)
+            {
+                coldText2.gameObject.SetActive(false);
+            }
+        }
+
+        if (currentCold >= 25f)
+        {
+            coldText3.gameObject.SetActive(true);
+            if (currentCold == maxCold)
+            {
+                coldText3.gameObject.SetActive(false);
+            }
+        }
+
+        if (currentCold == 0)
+        {
+            coldText1.gameObject.SetActive(false);
+            coldText2.gameObject.SetActive(false);
+            coldText3.gameObject.SetActive(false);
+        }
+    }
+
+    
+
     void GameOver()
     {
         if (currentCold == maxCold)
         {
             gameOverScreen.gameObject.SetActive(true);
+            gameOverText.gameObject.SetActive(true);
         }
     }
 }
