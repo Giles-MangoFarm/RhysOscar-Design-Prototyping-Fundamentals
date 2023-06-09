@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ColdSystem : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ColdSystem : MonoBehaviour
     public float maxCold = 30f; // the maximum possible cold level, reaching this means game over
     public float coldRate = 1f; // the rate at which cold increases
     public bool isCold; //whether cold is increasing or not
+    //PlayerMovement playerMove;
+    public int woodCount = 0;
 
     public GameObject gameOverScreen;
     public GameObject gameOverText;
@@ -18,6 +21,7 @@ public class ColdSystem : MonoBehaviour
     public GameObject coldText2;
     public GameObject coldText3;
     public GameObject fireText;
+    public GameObject hero;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +58,8 @@ public class ColdSystem : MonoBehaviour
 
         GameOver(); //calls to the GameOver function
         Damage(); //calls to the Damage function
-       
+
+        //playerMove.MoveLock();
     }
 
     void OnTriggerEnter(Collider col)
@@ -66,7 +71,10 @@ public class ColdSystem : MonoBehaviour
             coldRate = 2f;
         }
 
-
+        if(col.gameObject.tag == "Wood")
+        {
+            woodCount++;
+        }
 
 
         //if player touches a Camp Fire, they are no longer cold and their cold level goes back to 0
@@ -75,6 +83,7 @@ public class ColdSystem : MonoBehaviour
             isCold = false;
             currentCold = 0f;
             fireText.gameObject.SetActive(true);
+            
         }
     }
     private void OnTriggerExit(Collider col)
@@ -83,6 +92,11 @@ public class ColdSystem : MonoBehaviour
         if (col.gameObject.tag == "IceWater")
         {
             coldRate = 1f;
+        }
+
+        if (col.gameObject.tag == "CampFire")
+        {
+            fireText.gameObject.SetActive(false);
         }
     }
 
@@ -132,6 +146,11 @@ public class ColdSystem : MonoBehaviour
         {
             gameOverScreen.gameObject.SetActive(true);
             gameOverText.gameObject.SetActive(true);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            //hero.GetComponent<PlayerMovement>().canPlay == false;
+            
         }
     }
 }

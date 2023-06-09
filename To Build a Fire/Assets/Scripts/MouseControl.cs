@@ -6,9 +6,9 @@ using UnityEngine.Animations;
 public class MouseControl : MonoBehaviour
 {
     public float sensitivity = 800f; // mouse sensitivity
-    public float clampAngle = 90f; // limiting our vertical look angle
+    public float clampAngle = 90f; // limit of vertical look angle
     public Transform playerObject; // stores the transform of the player container
-    public Transform camera; // stores the transform of the camera
+    public Transform mCamera; // stores the transform of the camera
 
     private Vector3 mousePos; // stores the mouse position
     private float xRotation = 0f; // final vertical rotation value
@@ -33,7 +33,9 @@ public class MouseControl : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos.z = 2.0f;
             objectPos = Camera.main.ScreenToWorldPoint(mousePos);
+            objectPos.y = 0.5f;
             Instantiate(campFire, objectPos, Quaternion.identity);
+
         }
     }
 
@@ -52,7 +54,7 @@ public class MouseControl : MonoBehaviour
 
     private void LookAt()
     {
-        camera.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        mCamera.localRotation = Quaternion.Euler(xRotation, 0, 0);
         playerObject.Rotate(Vector3.up * mousePos.x);
     }
 }
