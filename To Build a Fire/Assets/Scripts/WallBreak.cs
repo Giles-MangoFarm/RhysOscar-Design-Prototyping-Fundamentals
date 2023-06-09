@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class WallBreak : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Ray ray = new Ray(); //defines the ray 
+    private RaycastHit hitObject;
+    public LayerMask layerToHit;
+    public float rayLength = 10f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            CastRay();
+        }
+    }
+
+    private void CastRay()
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hitObject, rayLength, layerToHit))
+        {
+            Destroy(hitObject.collider.gameObject);
+        }
     }
 }
