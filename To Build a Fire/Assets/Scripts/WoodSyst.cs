@@ -5,8 +5,6 @@ using UnityEngine;
 public class WoodSyst : MonoBehaviour
 {
     public GameObject wood;
-
-    MouseControl mouseLook;
     
     // Start is called before the first frame update
     void Start()

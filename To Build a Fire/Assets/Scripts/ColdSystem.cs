@@ -71,11 +71,6 @@ public class ColdSystem : MonoBehaviour
             coldRate = 2f;
         }
 
-        if(col.gameObject.tag == "Wood")
-        {
-            woodCount++;
-        }
-
 
         //if player touches a Camp Fire, they are no longer cold and their cold level goes back to 0
         if (col.gameObject.tag == "CampFire")
