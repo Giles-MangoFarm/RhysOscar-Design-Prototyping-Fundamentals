@@ -486,7 +486,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 271441690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fc4295531c5683419c8fc2eb99a2c84, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e48c2a1c8f6ce145a0af67af8b53f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   woodDisplay: {fileID: 1992122510}
@@ -690,7 +690,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58956
+  m_Name: pb_Mesh25558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

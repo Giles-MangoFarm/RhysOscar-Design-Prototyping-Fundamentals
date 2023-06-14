@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameUI : MonoBehaviour
+public class WoodLogic : MonoBehaviour
 {
     public Text woodDisplay;
     public int woodCount = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class GameUI : MonoBehaviour
         if (col.gameObject.tag == "Wood")
         {
             woodCount++;
+            Destroy(GameObject.FindWithTag("Wood"));
         }
     }
 }
