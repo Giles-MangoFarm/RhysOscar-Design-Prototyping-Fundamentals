@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
-using TMPro;
+
 
 public class ColdSystem : MonoBehaviour
 {
@@ -12,8 +12,6 @@ public class ColdSystem : MonoBehaviour
     public float maxCold = 30f; // the maximum possible cold level, reaching this means game over
     public float coldRate = 1f; // the rate at which cold increases
     public bool isCold; //whether cold is increasing or not
-    //PlayerMovement playerMove;
-    public int woodCount = 0;
 
     public GameObject gameOverScreen;
     public GameObject gameOverText;
@@ -53,7 +51,6 @@ public class ColdSystem : MonoBehaviour
         {
             isCold = false;
             currentCold = maxCold;
-
         }
 
         GameOver(); //calls to the GameOver function
@@ -70,7 +67,6 @@ public class ColdSystem : MonoBehaviour
             isCold = true;
             coldRate = 2f;
         }
-
 
         //if player touches a Camp Fire, they are no longer cold and their cold level goes back to 0
         if (col.gameObject.tag == "CampFire")
@@ -133,19 +129,21 @@ public class ColdSystem : MonoBehaviour
         }
     }
 
-    
+    IEnumerator Death()  //activates the game over text and restarts the game after a 3 second delay
+    {
+        gameOverScreen.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     void GameOver()
-    {   //if the player reaches maximum cold level, death UI appears 
+    {   //if the player reaches maximum cold level, call the Death Coroutine
         if (currentCold == maxCold)
         {
-            gameOverScreen.gameObject.SetActive(true);
-            gameOverText.gameObject.SetActive(true);
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+            StartCoroutine(Death());
             //hero.GetComponent<PlayerMovement>().canPlay == false;
-            
+
         }
     }
 }

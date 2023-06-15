@@ -58,11 +58,10 @@ public class PlayerMovement : MonoBehaviour
         charController.Move(velocity * Time.deltaTime); // actually move the player up
     }
 
-    public void MoveLock()
+    /*IEnumerator MoveLock()
     {
-        if (canPlay == false)
-        {
-            movementSpeed = 0f;
-        }
-    }
+        
+        movementSpeed = 0f;
+        
+    }*/
 }
