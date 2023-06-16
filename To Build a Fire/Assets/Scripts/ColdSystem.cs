@@ -20,6 +20,7 @@ public class ColdSystem : MonoBehaviour
     public GameObject coldText3;
     public GameObject fireText;
     public GameObject hero;
+    public GameObject playerCold;
 
     // Start is called before the first frame update
     void Start()
@@ -40,10 +41,11 @@ public class ColdSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if player is cold, their cold level increases by 1 each second
+        //if player is cold, their cold level increases by 1 each second, which is reflected by a slider meter
         if (isCold == true)
         {
             currentCold += coldRate * Time.deltaTime;
+            playerCold.GetComponent<ColdMeter>().UpdateSLider(currentCold / maxCold);
         }
 
         //if the player's cold level reaches 30, it stops increasing and disables being cold
@@ -55,8 +57,6 @@ public class ColdSystem : MonoBehaviour
 
         GameOver(); //calls to the GameOver function
         Damage(); //calls to the Damage function
-
-        //playerMove.MoveLock();
     }
 
     void OnTriggerEnter(Collider col)
@@ -74,7 +74,7 @@ public class ColdSystem : MonoBehaviour
             isCold = false;
             currentCold = 0f;
             fireText.gameObject.SetActive(true);
-            
+            playerCold.GetComponent <ColdMeter>().UpdateSLider(currentCold);
         }
     }
     private void OnTriggerExit(Collider col)

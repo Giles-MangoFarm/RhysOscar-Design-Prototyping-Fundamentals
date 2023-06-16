@@ -12,10 +12,14 @@ public class WoodLogic : MonoBehaviour
     private Vector3 mousePos;
     private Vector3 objectPos;
     public GameObject campFire;
+    public ColdSystem cS;
     // Start is called before the first frame update
     void Start()
     {
-
+        /*campFire = GameObject.Find("Campfire");
+        campFire.GetComponent<TheScriptOnCampfire>().TheFunctionOnCampfire();
+        cS = FindObjectOfType<ColdSystem>();
+        cS.playerIsFuckingFreezeing = true;*/
     }
 
     // Update is called once per frame

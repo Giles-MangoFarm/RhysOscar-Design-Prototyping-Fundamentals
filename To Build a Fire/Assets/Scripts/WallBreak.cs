@@ -7,7 +7,7 @@ public class WallBreak : MonoBehaviour
     private Ray ray = new Ray(); //defines the ray 
     private RaycastHit hitObject;
     public LayerMask layerToHit;
-    public float rayLength = 10f;
+    public float rayLength = 5f;
 
     void Update()
     {
