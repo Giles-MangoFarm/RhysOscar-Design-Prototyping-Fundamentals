@@ -12,7 +12,11 @@ public class WoodLogic : MonoBehaviour
     private Vector3 mousePos;
     private Vector3 objectPos;
     public GameObject campFire;
-    public ColdSystem cS;
+    private Ray ray = new Ray();
+    private RaycastHit hitObject;
+    public LayerMask layerToHit;
+    public float rayLength = 5f;
+    //public ColdSystem cS;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,14 +44,21 @@ public class WoodLogic : MonoBehaviour
                 woodCount = woodCount - campFireCost;
             }
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            CastRay();
+        }
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void CastRay()
     {
-        if (col.gameObject.tag == "Wood")
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hitObject, rayLength, layerToHit))
         {
+            Destroy(hitObject.collider.gameObject);
             woodCount++;
-            Destroy(GameObject.FindWithTag("Wood"));
         }
     }
 }

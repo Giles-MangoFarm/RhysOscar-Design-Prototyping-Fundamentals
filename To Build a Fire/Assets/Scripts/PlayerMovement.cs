@@ -8,17 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode back;
     public KeyCode left;
     public KeyCode right;
-
     public UnityEngine.CharacterController charController;
     public float movementSpeed = 12f;
-
-    //public float gravity = -9.81f;
-    private Vector3 velocity;
-
     private float maxSpeed = 0;
-
-    public bool canPlay = true;
-   
 
     // Awake is called before Start
     void Awake()
@@ -45,23 +37,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         MovePlayer(move); // Run the MovePlayer function with the vector3 value move 
-        
-
     }
 
     void MovePlayer(Vector3 move)
     {
         charController.Move(move * maxSpeed * Time.deltaTime); //moves the GameObject using the character controller
-
-        //velocity.y += gravity * Time.deltaTime; // gravity affects the jump velocity
-
-        charController.Move(velocity * Time.deltaTime); // actually move the player up
     }
-
-    /*IEnumerator MoveLock()
-    {
-        
-        movementSpeed = 0f;
-        
-    }*/
 }

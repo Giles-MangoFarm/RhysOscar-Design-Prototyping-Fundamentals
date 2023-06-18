@@ -13,14 +13,14 @@ public class ColdSystem : MonoBehaviour
     public float coldRate = 1f; // the rate at which cold increases
     public bool isCold; //whether cold is increasing or not
 
-    public GameObject gameOverScreen;
-    public GameObject gameOverText;
-    public GameObject coldText1;
-    public GameObject coldText2;
-    public GameObject coldText3;
-    public GameObject fireText;
-    public GameObject hero;
+    public GameObject gameOverScreen; //screen overlay that is displayed over the game upon death
+    public GameObject gameOverText; //text displayed upon death
+    public GameObject coldText1; //text displayed upon reaching 1st Cold milestone
+    public GameObject coldText2; //text displayed upon reaching 2nd Cold milestone
+    public GameObject coldText3; //text displayed upon reaching 3rd Cold milestone
+    public GameObject fireText; //text displayed upon reaching a campfire
     public GameObject playerCold;
+    public GameObject mainCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -142,8 +142,8 @@ public class ColdSystem : MonoBehaviour
         if (currentCold == maxCold)
         {
             StartCoroutine(Death());
-            //hero.GetComponent<PlayerMovement>().canPlay == false;
-
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            mainCamera.GetComponent<MouseControl>().enabled = false;
         }
     }
 }
