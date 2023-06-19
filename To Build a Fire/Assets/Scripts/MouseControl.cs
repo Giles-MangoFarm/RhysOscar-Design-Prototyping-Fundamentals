@@ -12,31 +12,25 @@ public class MouseControl : MonoBehaviour
 
     private Vector3 mousePos; // stores the mouse position
     private float xRotation = 0f; // final vertical rotation value
-    //private Vector3 objectPos;
-    //public GameObject campFire;
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // locks the mouse to the center of the screen
+        Cursor.lockState = CursorLockMode.Locked;//locks the mouse to the center of the screen
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetMousePos(); // calls a function to get the mouse position
-        FixXRotation(); // clamps looking up and down
-        LookAt(); // looks at the mouse position
+        GetMousePos(); //calls a function to get the mouse position
+        FixXRotation(); //clamps looking up and down
+        LookAt(); //looks at the mouse position
 
-        /*if (Input.GetButtonDown("Fire2"))
+        //if player hits tab, unlock the mouse from the center of the screen
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            mousePos = Input.mousePosition;
-            mousePos.z = 2.0f;
-            objectPos = Camera.main.ScreenToWorldPoint(mousePos);
-            objectPos.y = 0.5f;
-            Instantiate(campFire, objectPos, Quaternion.identity);
-
-        }*/
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     private void GetMousePos()

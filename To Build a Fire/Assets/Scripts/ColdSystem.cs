@@ -85,6 +85,7 @@ public class ColdSystem : MonoBehaviour
             coldRate = 1f;
         }
 
+        //campfire text deactivates when not at the campfire
         if (col.gameObject.tag == "CampFire")
         {
             fireText.gameObject.SetActive(false);
@@ -120,7 +121,7 @@ public class ColdSystem : MonoBehaviour
                 coldText3.gameObject.SetActive(false);
             }
         }
-        //if cold is set back to 0 by a campfire, any on-screen messages are disabled
+        //if cold is reduced to 0, any on-screen messages are disabled
         if (currentCold == 0)
         {
             coldText1.gameObject.SetActive(false);
@@ -138,7 +139,7 @@ public class ColdSystem : MonoBehaviour
     }
 
     void GameOver()
-    {   //if the player reaches maximum cold level, call the Death Coroutine
+    {   //if the player reaches maximum cold level, call the Death Coroutine and disable player input
         if (currentCold == maxCold)
         {
             StartCoroutine(Death());
