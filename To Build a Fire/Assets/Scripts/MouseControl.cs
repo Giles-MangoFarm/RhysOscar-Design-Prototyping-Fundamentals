@@ -27,7 +27,7 @@ public class MouseControl : MonoBehaviour
         LookAt(); //looks at the mouse position
 
         //if player hits tab, unlock the mouse from the center of the screen
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
         }
