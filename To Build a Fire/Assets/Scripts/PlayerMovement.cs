@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController charController;
     public float movementSpeed = 6f;
     private float maxSpeed = 0;
+    public float gravity = -10f;
+    private Vector3 velocity;
 
     // Awake is called before Start
     void Awake()
@@ -51,5 +53,7 @@ public class PlayerMovement : MonoBehaviour
     void MovePlayer(Vector3 move)
     {
         charController.Move(move * maxSpeed * Time.deltaTime); //moves the GameObject using the character controller
+        velocity.y += gravity * Time.deltaTime;
+        charController.Move(velocity * Time.deltaTime);
     }
 }
