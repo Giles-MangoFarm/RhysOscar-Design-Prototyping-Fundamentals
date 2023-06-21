@@ -40,11 +40,11 @@ public class WoodLogic : MonoBehaviour
         //if the player inputs left mouse button, call the Cast Ray function
         if (Input.GetButtonDown("Fire1"))
         {
-            CastRay();
+            PickUpWood();
         }
     }
 
-    private void CastRay()
+    private void PickUpWood()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ensures the ray emerges from the camera's center
 

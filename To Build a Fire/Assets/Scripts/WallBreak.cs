@@ -14,11 +14,11 @@ public class WallBreak : MonoBehaviour
         //if player clicks left mouse button, call the CastRay function
         if (Input.GetButtonDown("Fire1"))
         {
-            CastRay();
+            DestroyWall();
         }
     }
 
-    private void CastRay()
+    private void DestroyWall()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ensures the ray emerges from the camera's center
 
