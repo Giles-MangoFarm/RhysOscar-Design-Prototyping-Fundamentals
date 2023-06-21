@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
-
 
 public class ColdSystem : MonoBehaviour
 {
@@ -19,8 +16,8 @@ public class ColdSystem : MonoBehaviour
     public GameObject coldText2; //text displayed upon reaching 2nd Cold milestone
     public GameObject coldText3; //text displayed upon reaching 3rd Cold milestone
     public GameObject fireText; //text displayed upon reaching a campfire
-    public GameObject playerCold;
-    public GameObject mainCamera;
+    public GameObject playerCold; //reference to the player's cold meter UI
+    public GameObject mainCamera; //referenece to the game's main camera
 
     // Start is called before the first frame update
     void Start()
@@ -130,7 +127,7 @@ public class ColdSystem : MonoBehaviour
         }
     }
 
-    IEnumerator Death()  //activates the game over text and restarts the game after a 3 second delay
+    public IEnumerator Death()  //activates the game over text and restarts the game after a 3 second delay
     {
         gameOverScreen.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
@@ -146,5 +143,10 @@ public class ColdSystem : MonoBehaviour
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             mainCamera.GetComponent<MouseControl>().enabled = false;
         }
+    }
+
+    public void InstaDeath()
+    {
+        currentCold = maxCold;
     }
 }

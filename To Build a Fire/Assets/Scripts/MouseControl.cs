@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class MouseControl : MonoBehaviour
 {
@@ -26,7 +25,7 @@ public class MouseControl : MonoBehaviour
         FixXRotation(); //clamps looking up and down
         LookAt(); //looks at the mouse position
 
-        //if player hits tab, unlock the mouse from the center of the screen
+        //if player hits escape, unlock the mouse from the center of the screen
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;

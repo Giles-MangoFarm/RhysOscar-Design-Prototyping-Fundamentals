@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MoveInputCheck(); //constantly checks for player input
+
+        //if player hits escape, load the main menu scene
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("Menu");

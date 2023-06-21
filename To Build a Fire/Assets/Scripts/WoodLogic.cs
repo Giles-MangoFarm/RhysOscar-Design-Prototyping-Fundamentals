@@ -7,26 +7,16 @@ using UnityEngine.UI;
 public class WoodLogic : MonoBehaviour
 {
     public Text woodDisplay; //the UI displaying the player's available wood
-    public int woodCount = 0; //the number of wood the player has
+    public int woodCount = 0; //the amount of wood the player has
     public int campFireCost = 5; //wood cost of creating a campfire
     private Vector3 mousePos; //gets the current mouse position
     private Vector3 objectPos; //gets the object position
-    public GameObject campFire;
-    private Ray ray = new Ray();
-    private RaycastHit hitObject;
-    public LayerMask layerToHit;
-    public float rayLength = 5f;
-    //public ColdSystem cS;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        /*campFire = GameObject.Find("Campfire");
-        campFire.GetComponent<TheScriptOnCampfire>().TheFunctionOnCampfire();
-        cS = FindObjectOfType<ColdSystem>();
-        cS.playerIsFuckingFreezeing = true;*/
-    }
-
+    public GameObject campFire; //defines the camp fire game object
+    private Ray ray = new Ray(); //defines the ray 
+    private RaycastHit hitObject; //gets the ray to hit an object
+    public LayerMask layerToHit; //defines the layer the raycast will be looking to hit
+    public float rayLength = 5f; //length of the ray
+   
     // Update is called once per frame
     void Update()
     {
@@ -56,13 +46,13 @@ public class WoodLogic : MonoBehaviour
 
     private void CastRay()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ray is cast straight from the current camera position 
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ensures the ray emerges from the camera's center
 
+        //if the raycast hits wood layer, the wood object is destroyed and the player's wood count increases by 1
         if (Physics.Raycast(ray, out hitObject, rayLength, layerToHit))
         {
             Destroy(hitObject.collider.gameObject);
             woodCount++;
-            //if the raycast hits wood layer, the wood object is destroyed and the player's wood count increases by 1
         }
     }
 }
