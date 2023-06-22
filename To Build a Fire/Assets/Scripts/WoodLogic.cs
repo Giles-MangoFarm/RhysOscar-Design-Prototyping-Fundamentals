@@ -37,7 +37,7 @@ public class WoodLogic : MonoBehaviour
             }
         }
 
-        //if the player inputs left mouse button, call the Cast Ray function
+        //if the player inputs left mouse button, call the Pick Up Wood function
         if (Input.GetButtonDown("Fire1"))
         {
             PickUpWood();
