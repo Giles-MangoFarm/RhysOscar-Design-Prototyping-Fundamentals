@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!4 &141197637 stripped
@@ -5458,6 +5462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1 &464414857
@@ -5736,6 +5744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1001 &558470844
@@ -5797,6 +5809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1001 &606810710
@@ -5858,6 +5874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1001 &607148067
@@ -6258,7 +6278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f4d976a24e2c23488b61b34042a5b8a, type: 2}
+  - {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6352,6 +6372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!4 &726640196 stripped
@@ -7587,6 +7611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!850595691 &980685033
@@ -7772,6 +7800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!4 &1062283501 stripped
@@ -8304,6 +8336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!43 &1208778802
@@ -8696,7 +8732,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f4d976a24e2c23488b61b34042a5b8a, type: 2}
+  - {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9930,6 +9966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!4 &1450080491 stripped
@@ -10235,6 +10275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!43 &1526277931
@@ -10542,6 +10586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1001 &1584801660
@@ -15477,6 +15525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!4 &1655707221 stripped
@@ -15543,6 +15595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1 &1701484884
@@ -16059,6 +16115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1001 &1860905238
@@ -16636,6 +16696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1001 &1961417403
@@ -17616,6 +17680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Wall 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
 --- !u!1 &2073506272
@@ -18080,5 +18148,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8307631620530727780, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfd5fd47193bb748b62964e71cd6ade, type: 3}
