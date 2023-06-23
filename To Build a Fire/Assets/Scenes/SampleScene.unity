@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5638,7 +5638,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f4d976a24e2c23488b61b34042a5b8a, type: 2}
+  - {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6008,7 +6008,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f4d976a24e2c23488b61b34042a5b8a, type: 2}
+  - {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6381,7 +6381,7 @@ GameObject:
   - component: {fileID: 823497011}
   - component: {fileID: 823497010}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6480,7 +6480,7 @@ GameObject:
   - component: {fileID: 873255976}
   - component: {fileID: 873255975}
   m_Layer: 0
-  m_Name: Spot Light (1)
+  m_Name: Exterior Light_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9589,7 +9589,7 @@ GameObject:
   - component: {fileID: 1602397529}
   - component: {fileID: 1602397528}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Snow Particle System_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10382,7 +10382,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1.6
+      value: 0.38
       mode: 0
       spread: 0
       speed:
@@ -14382,7 +14382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602397527}
   m_LocalRotation: {x: -0.41565102, y: -0.5720439, z: 0.5720439, w: 0.41565102}
-  m_LocalPosition: {x: 126.79251, y: 5.67, z: 106.58}
+  m_LocalPosition: {x: 126.79251, y: 5.67, z: 105.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14601,7 +14601,7 @@ GameObject:
   - component: {fileID: 1756303779}
   - component: {fileID: 1756303778}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: Exterior Light_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15095,7 +15095,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f4d976a24e2c23488b61b34042a5b8a, type: 2}
+  - {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16619,7 +16619,7 @@ PrefabInstance:
     - target: {fileID: 4268714334607102411, guid: 0e0e29e23fa35b64cac6e89e5a296198, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0f4d976a24e2c23488b61b34042a5b8a, type: 2}
+      objectReference: {fileID: 2100000, guid: 96fa92e0f0dca214da93a698d015a2fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e0e29e23fa35b64cac6e89e5a296198, type: 3}
 --- !u!1001 &5432475031385952799
